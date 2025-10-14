@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>NoorTime — Your Personal Islamic Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Amiri+Quran&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <span class="logo-icon">🌙</span>
+            <h1>NoorTime</h1>
+          </div>
+          <p class="tagline">Your Personal Islamic Companion</p>
+        </div>
+      </header>
+
+      <nav class="tabs">
+        <div class="container">
+          <button class="tab-btn" data-tab="quran">Quran</button>
+          <button class="tab-btn" data-tab="dhikr">Dhikr</button>
+          <button class="tab-btn" data-tab="names">99 Names</button>
+          <button class="tab-btn" data-tab="holidays">Holidays</button>
+        </div>
+      </nav>
+
+      <main class="container">
+        <div id="quran" class="tab-content">
+          <div class="card">
+            <h2>Holy Quran</h2>
+            <div class="input-group">
+              <select id="surah-select">
+                <option value="">Select a Surah...</option>
+              </select>
+              <button id="load-surah">Load Surah</button>
+            </div>
+            <div id="quran-display"></div>
+          </div>
+        </div>
+
+        <div id="dhikr" class="tab-content active">
+          <div class="card">
+            <h2>Dhikr Counter</h2>
+            <div id="dhikr-display">
+              <div class="dhikr-text"></div>
+              <div class="dhikr-counter">
+                <button id="dhikr-count" class="count-btn">Tap to Count</button>
+                <p class="count-display">Count: <span id="count-number">0</span></p>
+              </div>
+              <div class="dhikr-controls">
+                <button id="next-dhikr">Next Dhikr</button>
+                <button id="reset-dhikr">Reset Counter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="names" class="tab-content">
+          <div class="card">
+            <h2>99 Names of Allah</h2>
+            <div id="names-grid" class="names-grid"></div>
+          </div>
+        </div>
+
+        <div id="holidays" class="tab-content">
+          <div class="card">
+            <h2>Islamic Holidays</h2>
+            <div id="holidays-display"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p>© 2025 NoorTime — Made with ❤️ for the Ummah</p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
