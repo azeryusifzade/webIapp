@@ -1,7 +1,7 @@
-import { initQuran } from './modules/quran.js';
-import { initDhikr } from './modules/dhikr.js';
-import { initNames } from './modules/names.js';
-import { initHolidays } from './modules/holidays.js';
+import { initQuran } from 'https://azeryusifzade.github.io/webIapp/modules/quran.js';
+import { initDhikr } from 'https://azeryusifzade.github.io/webIapp/modules/dhikr.js';
+import { initNames } from 'https://azeryusifzade.github.io/webIapp/modules/names.js';
+import { initHolidays } from 'https://azeryusifzade.github.io/webIapp/modules/holidays.js';
 
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
