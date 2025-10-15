@@ -120,7 +120,6 @@ export function initQuran() {
   const loadBtn = document.getElementById('load-surah');
   const displayDiv = document.getElementById('quran-display');
 
-  // Заполнение select
   surahs.forEach((surah) => {
     const option = document.createElement('option');
     option.value = surah.number;
@@ -142,7 +141,6 @@ async function fetchSurah(surahNumber) {
   const displayDiv = document.getElementById('quran-display');
   displayDiv.innerHTML = '<div class="loading">Loading Surah...</div>';
 
-  // Проверяем localStorage
   const cached = localStorage.getItem(`surah-${surahNumber}`);
   if (cached) {
     displaySurah(JSON.parse(cached));
@@ -156,8 +154,7 @@ async function fetchSurah(surahNumber) {
     const data = await response.json();
 
     if (data.code !== 200) throw new Error('Failed to fetch Surah');
-
-    // Кэшируем в localStorage
+    
     localStorage.setItem(`surah-${surahNumber}`, JSON.stringify(data.data));
 
     displaySurah(data.data);
